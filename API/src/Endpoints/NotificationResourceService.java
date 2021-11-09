@@ -34,8 +34,7 @@ import Validation.Global.EntityValidator;
 @Path("/notifications")
 @Singleton
 public class NotificationResourceService extends Utils {
-    static final IDatabase database = new MongoDB(
-            "mongodb+srv://notifyme:Sc1yTvMC8mR3d4tX@notifyme.a9swz.mongodb.net/NotificationModule?retryWrites=true&w=majority");
+    static final IDatabase database = new MongoDB(DATABASE_URL);
 
     static {
         database.openConnection();
